@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Sample</title>
+<script type="text/javascript" src="./jquery/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="./jquery/jquery.activity-indicator-1.0.0.min.js"></script>
+<script type="text/javascript" src="./jquery/jquery-ui.js"></script>
+<script type="text/javascript" src="./jquery/jquery.flot.js"></script>
+<script type="text/javascript" src="./jquery/jquery.flot.stack.min.js"></script>
+<script type="text/javascript" src="./jquery/jquery.flot.selection.js"></script>
+<script type="text/javascript" src="./jquery/jquery.flot.resize.min.js"></script>
+
+<script type="text/javascript" src="./jsFiles/sample.js"></script>
+<script type="text/javascript" src="./jsFiles/sample_callback.js"></script>
+
+<style type="text/css">
+.sticky_table thead th {
+  /* 縦スクロール時に固定する */
+  position: -webkit-sticky;
+  position: sticky;
+  /* 高さが変わらないよう改行させない */
+  white-space: nowrap;
+}
+.sticky_table thead tr:nth-child(1) th {
+  top: 0;
+}
+.sticky_table thead tr:nth-child(2) th {
+  top: 1.5rem; /* 2行目は1行目の高さの位置に固定する */
+}
+.sticky_table thead tr:nth-child(3) th {
+  top: 3rem; /* 3行目は1〜2行目の高さの位置に固定する */
+}
+</style>
+
+</head>
+<body id="graph-container" class="addFocusline" style="background-color: #F4FCFF;color: #362b36;">
+<label for="start">Start date:</label>
+
+<input type="date" id="start" name="trip-start"
+       value="2018-07-22"
+       min="2018-01-01" max="2018-12-31"><br>
+
+<button id="button" title="hogehoge">sample1</button><br>
+<button id="button" onmouseover=sample()>sample2</button><br>
+
+<form action="xxx.php" method="post"><label>メール（type="email"）:<input type="email" name="email"></label><input type="submit" value="送信"></form>
+<form action="xxx.php" method="post"><label>URL（type="url"）:<input type="url" name="url"></label><input type="submit" value="送信"></form>
+<form action="xxx.php" method="post"><label>検索（type="search"）:<input type="search" name="search"></label><input type="submit" value="送信"></form>
+<form action="xxx.php" method="post"><label>電話（type="telephone"）:<input type="tel" name="tel"></label><input type="submit" value="送信"></form>
+<form action="xxx.php" method="post"><label>数値（type="number"）:<input type="number" name="number"></label><input type="submit" value="送信"></form>
+<form action="xxx.php" method="post"><label>日付（type="date"）:<input type="date" name="date"></label><input type="submit" value="送信"></form>
+<form action="xxx.php" method="post"><label>日時（type="datetime"）:<input type="datetime" name="datetime"></label><input type="submit" value="送信"></form>
+<form action="xxx.php" method="post"><label>ローカル日時（type="datetime-local"）:<input type="datetime-local" name="datetime-local"></label><input type="submit" value="送信"></form>
+<form action="xxx.php" method="post"><label>月（type="month"）:<input type="month" name="month"></label><input type="submit" value="送信"></form>
+<form action="xxx.php" method="post"><label>週（type="week"）:<input type="week" name="week"></label><input type="submit" value="送信"></form>
+<form action="xxx.php" method="post"><label>時間（type="time"）:<input type="time" name="time"></label><input type="submit" value="送信"></form>
+<form action="xxx.php" method="post"><label>レンジ（type="range"）:<input type="range" name="range"></label><input type="submit" value="送信"></form>
+<form action="xxx.php" method="post"><label>色（type="color"）:<input type="color" name="color"></label><input type="submit" value="送信"></form>
+</body>
+</html>
